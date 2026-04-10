@@ -16,3 +16,7 @@ test03 : lib/liste-c.o test/test03.c
 
 bench_test02: lib/liste-c.o test/test02.c
 	gcc -Wall test/test02.c lib/liste-c.o -o build/test02 -g -fsanitize=address
+
+
+liste-c.o: src/liste-c.h src/liste-c.c
+	gcc -c -Wall src/liste-c.c -o src/liste-c.o
